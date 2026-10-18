@@ -1,0 +1,7 @@
+*.log
+*.jsonl
+eigent_used_gh.txt
+proxies*.txt
+gh_accounts*.json
+card*.json
+state*.json

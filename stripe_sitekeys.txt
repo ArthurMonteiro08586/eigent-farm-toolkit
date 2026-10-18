@@ -1,0 +1,4 @@
+# Stripe hCaptcha sitekeys seen on eigent.ai checkout (fallback — farm captures live sitekey
+# from getcaptcha/hcaptcha network requests first). One per line, most recent first.
+24ed0064-62cf-4d42-9960-5dd1a41d4e29
+ec637546-e9b8-447a-ab81-b5fb6d228ab8
