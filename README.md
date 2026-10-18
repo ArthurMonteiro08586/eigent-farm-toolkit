@@ -1,6 +1,12 @@
 # eigent-farm-toolkit
 
 Масс-фарм Pro-триалов eigent.ai (7 дней, $99.99/мес план) — полный E2E без ручного браузера.
+**+ реверс API**: auth-цепочка, LiteLLM-прокси, карта 50+ эндпоинтов.
+
+- 📖 **[GUIDE.md](GUIDE.md)** — как юзать всё (фарм, token-экстрактор, API-вызовы, дашборд, питфолы)
+- 🗺 **[API_MAP.md](API_MAP.md)** — реверс API: GH OAuth → stack JWT → login-by_stack → sk-ключ → eigent-proxy (LiteLLM), billing-гейт, 20 моделей
+- 📊 **`dashboard.py`** — локальный дашборд (stdlib, `http://127.0.0.1:8750`): банк триалов, API-креды (маскированные), GH-пул, tail логов, live-probe прокси без расхода кредитов
+- 🔑 **`token_extract.py [idx]`** — GH-акк → Bearer-токен → sk-ключ + api_url → E2E probe → `eigent_api_creds.json`
 
 ## Флоу (проверен E2E, ~3 мин/акк)
 
@@ -34,6 +40,9 @@
   (обход «Foreground увели» для hCaptcha-чекбоксов)
 - `stripe_sitekeys.txt` — известные Stripe hCaptcha sitekey'и (fallback; основной —
   динамический захват из getcaptcha-запросов)
+- `token_extract.py` — экстрактор API-кредов из GH-аккаунта (см. GUIDE.md §2)
+- `dashboard.py` — локальный веб-дашборд статуса (см. GUIDE.md §4)
+- `GUIDE.md` / `API_MAP.md` — гайд использования + карта реверса API
 
 ## Env
 
